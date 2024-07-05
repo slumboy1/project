@@ -1,0 +1,10 @@
+body {
+    margin: 550;
+    font-family: '한컴 윤고딕 240';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family:'한컴 윤고딕 240';
+  }
