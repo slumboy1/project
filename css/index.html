@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 페이지 구성 예시</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #69912c;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #78a0a8;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .button-container {
+            display: flex;
+            justify-content: flex-start; /* 좌측 상단 정렬 */
+            margin-bottom: 10px;
+        }
+        .button-container.center {
+            justify-content: center; /* 중앙 정렬 */
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #9fa52d;
+            color: #14042c;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px; /* 모든 버튼 사이의 간격 조정 */
+        }
+        .button:last-child {
+            margin-right: 0; /* 마지막 버튼의 오른쪽 마진 제거 */
+        }
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .date-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .date-arrow {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 0 20px;
+        }
+        .date-display {
+            font-size: 24px;
+        }
+    </style>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+</head>
+<body>
+    <div class="container">
+        <div class="date-container">
+            <div class="date-arrow" id="prev-date">&#9664;</div>
+            <div class="date-display" id="current-date"></div>
+            <div class="date-arrow" id="next-date">&#9654;</div>
+        </div>
+
+        <h1>햇살 온도계</h1>
+        <p>자외선 지수와 체감 온도를 확인하세요.</p>
+
+        <!-- 지도를 표시할 요소 -->
+        <div id="map"></div>
+        
+        <!-- 좌측 상단 정렬 버튼 그룹 -->
+        <div class="button-container">
+            <button class="button">1. 자외선</button>
+            <button class="button">2. 체감온도</button>
+        </div>
+        
+        <!-- 중앙 정렬 버튼 그룹 -->
+        <div class="button-container center">
+            <button class="button">오전</button>
+            <button class="button">오후</button>
+            <button class="button">저녁</button>
+        </div>
+
+        <p>더 많은 내용을 추가하세요.</p>
+    </div>
+
+    <!-- 네이버 지도 API 스크립트 -->
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ec2a9jnc9m"></script>
+    <script>
+        // 지도 생성
+        function initMap() {
+            var map = new naver.maps.Map('map', {
+                center: new naver.maps.LatLng(37.5665, 126.9780), // 서울 시청 좌표
+                zoom: 16 // 줌 레벨
+            });
+        }
+        window.onload = function() {
+            initMap();
+
+            // 날짜 관련 JavaScript
+            const currentDateElem = document.getElementById('current-date');
+            let currentDate = new Date();
+
+            function updateDateDisplay() {
+                currentDateElem.textContent = currentDate.toISOString().split('T')[0];
+            }
+
+            document.getElementById('prev-date').addEventListener('click', () => {
+                currentDate.setDate(currentDate.getDate() - 1);
+                updateDateDisplay();
+            });
+
+            document.getElementById('next-date').addEventListener('click', () => {
+                currentDate.setDate(currentDate.getDate() + 1);
+                updateDateDisplay();
+            });
+
+            updateDateDisplay();
+        }
+    </script>
+</body>
+</html>
