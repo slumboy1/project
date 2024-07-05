@@ -1,0 +1,74 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 10vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin 20s infinite linear;
+  }
+}
+
+.App-header {
+  background-color: white; /* 'white'로 수정 */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 'left' 대신 'flex-start'로 수정 */
+  justify-content: flex-start; /* 'left' 대신 'flex-start'로 수정 */
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #609b0c;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-start; /* 좌측 상단 정렬 */
+  margin-bottom: 10px;
+}
+.button-container.center {
+  justify-content: center; /* 중앙 정렬 */
+}
+.button {
+  padding: 10px 20px;
+  background-color: #9fa52d;
+  color: #14042c;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* 모든 버튼 사이의 간격 조정 */
+}
+.button:last-child {
+  margin-right: 0; /* 마지막 버튼의 오른쪽 마진 제거 */
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.date-arrow {
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 20px;
+}
+.date-display {
+  font-size: 24px;
+}
