@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 
 function App() {
   const [currentDate, setCurrentDate] = useState(new Date());
-
+  const [statusValue, setStatusValue] = useState(75); // 임의의 상태 값을 설정합니다.
+  
   function updateDateDisplay() {
     return currentDate.toISOString().split('T')[0];
   }
@@ -25,6 +26,13 @@ function App() {
     });
   }
 
+  function getStatusEmoji(value) {
+    if (value > 80) return "😎"; // 상태 값이 80보다 크면 '최고'
+    if (value > 60) return "😊"; // 상태 값이 60보다 크면 '좋음'
+    if (value > 40) return "😐"; // 상태 값이 40보다 크면 '보통'
+    return "😟"; // 상태 값이 40 이하이면 '나쁨'
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -39,6 +47,11 @@ function App() {
           <button className="button">오전</button>
           <button className="button">오후</button>
           <button className="button">저녁</button>
+
+          <div className="status-box">
+            <span className="status-text">오늘 지수/ 온도는</span>
+            <span className="status-emoji">{getStatusEmoji(statusValue)}</span>
+          </div>
         </div>
 
         <img src={logo} className="App-logo" alt="React Logo" />
