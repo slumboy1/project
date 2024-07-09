@@ -60,7 +60,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://map.kakao.com/?referrer=daumtop"
+          href="https://wwwnew.kweather.co.kr/climate/climate_hot.html?menuTab=4&idx=&area=1801&rname=%EB%8C%80%EC%A0%84"
           target="_blank"
           rel="noopener noreferrer"
         >
