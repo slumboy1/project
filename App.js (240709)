@@ -64,7 +64,25 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          들어가기
+          들어가기(체감온도)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://search.daum.net/search
+        ?w=tot&DA=ATM&rtmaxcoll=ATM&q=%EB%8C%80%EC%A0%84%EC%9E%90%EC%99%B8%EC%84%A0"
+        target="_blank"
+        rel="noopener noreferrer">
+          들어가기(자외선)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://www.weather.go.kr/w/observation/land/past-obs/
+        obs-by-day.do?stn=133&yy=2024&mm=7&obs=1"
+        target="_blank"
+        rel="noopener noreferrer">
+          과거날씨 알아보기
         </a>
 
         {/* 날짜 관련 요소들 */}
