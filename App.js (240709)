@@ -60,7 +60,7 @@ function App() {
         </p>
         <a
           className="App-link"
-          href="https://wwwnew.kweather.co.kr/climate/climate_hot.html?menuTab=4&idx=&area=1801&rname=%EB%8C%80%EC%A0%84"
+          href="https://www.weather.go.kr/wgis-nuri/html/map.html"
           target="_blank"
           rel="noopener noreferrer"
         >
