@@ -1,9 +1,9 @@
-.App {
+App {
   text-align: left;
 }
 
 .App-logo {
-  height: 10vmin;
+  height: 65vmin;
   pointer-events: none;
 }
 
@@ -18,8 +18,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* 'left' 대신 'flex-start'로 수정 */
-  justify-content: flex-start; /* 'left' 대신 'flex-start'로 수정 */
+  align-items: center; /* 'left' 대신 'flex-start'로 수정 */
+  justify-content: center; /* 'left' 대신 'flex-start'로 수정 */
   font-size: calc(10px + 2vmin);
   color: rgb(253, 218, 166);
 }
@@ -70,24 +70,5 @@
   margin: 0 20px;
 }
 .date-display {
-  font-size: 24px;
-}
-
-.status-box {
-  display: flex;
-  align-items: center;
-  margin-left: 20px;
-  padding: 10px;
-  border: 1px solid #9fa52d;
-  border-radius: 5px;
-  background-color: white;
-}
-
-.status-text {
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.status-emoji {
   font-size: 24px;
 }
