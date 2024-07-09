@@ -1,0 +1,87 @@
+import logo from './sun-color-icon.svg';
+import './App.css';
+import React, { useState } from 'react';
+
+function App() {
+
+  return (
+    <div className="App">
+      <header className="App-header">
+
+        <img src={logo} className="App-logo" alt="React Logo" />
+        <p>
+          "오늘자 기온과 자외선을 알려드립니다. 최고의 날씨에서 최고의 일상을 누리세요!"
+        </p>
+        <a
+          className="App-link"
+          href="https://www.weather.go.kr/wgis-nuri/html/map.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          들어가기(체감온도)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://www.weather.go.kr/w/theme/daily-life/life-weather-index.do"
+        target="_blank"
+        rel="noopener noreferrer">
+          들어가기(자외선)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://www.weather.go.kr/w/observation/land/past-obs/obs-by-day.do"
+        target="_blank"
+        rel="noopener noreferrer">
+          과거날씨 알아보기
+        </a>
+
+      </header>
+    </div>
+  );
+}
+export default App;import logo from './sun-color-icon.svg';
+import './App.css';
+import React, { useState } from 'react';
+
+function App() {
+
+  return (
+    <div className="App">
+      <header className="App-header">
+
+        <img src={logo} className="App-logo" alt="React Logo" />
+        <p>
+          "오늘자 기온과 자외선을 알려드립니다. 최고의 날씨에서 최고의 일상을 누리세요!"
+        </p>
+        <a
+          className="App-link"
+          href="https://www.weather.go.kr/wgis-nuri/html/map.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          들어가기(체감온도)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://www.weather.go.kr/w/theme/daily-life/life-weather-index.do"
+        target="_blank"
+        rel="noopener noreferrer">
+          들어가기(자외선)
+        </a>
+
+        <a
+        className="App-link"
+        href="https://www.weather.go.kr/w/observation/land/past-obs/obs-by-day.do"
+        target="_blank"
+        rel="noopener noreferrer">
+          과거날씨 알아보기
+        </a>
+
+      </header>
+    </div>
+  );
+}
+export default App;
